@@ -1,0 +1,48 @@
+.body{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    gap: 50px;;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 80px;
+}
+
+.body .lside{
+    border: 1px solid;
+    max-height: 45%;
+    width: 27%;
+    border-radius: 20px;
+    margin-left: -25px;
+    background-color: rgba(232, 241, 248, 0.849);
+    height: 500px;
+}
+
+.body .midside{
+    padding-top: 45px;
+    margin-top: -30px;
+    border: 1px solid;
+    max-height: 45%;
+    max-width: 50%;
+    width: 800px;
+    border-radius: 20px;
+    background-color: rgba(232, 241, 248, 0.849);
+    height: 900px;
+}
+
+.body .rside{
+    border: 1px solid;
+    max-height: 45%;
+    width: 35%;
+    border-radius: 20px; 
+    background-color: rgba(232, 241, 248, 0.849);
+    height: 550px;
+}
+
+.img{
+    margin-top: 75px;
+    margin-left: 20px;
+    border: 1px solid;
+    height: 300px;
+    width: 300px;
+}

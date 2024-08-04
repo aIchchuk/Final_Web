@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.add{
+  font-family: cursive;
+  background-image: url("./assets/mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{  
+  background-color: rgb(227, 92, 51);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(190, 158, 242);
+}
