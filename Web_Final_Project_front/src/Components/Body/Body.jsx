@@ -13,7 +13,7 @@ function Body(){
       </div>
 
       <div className = "midside"  style = {{position: "relative", overflow: 'scroll' }}>
-        <h2>Recommended Channels</h2>
+        <h2>Trending Gifs</h2>
         <h2>Your Channels</h2>
         <TrendingGifs></TrendingGifs>
       </div>
