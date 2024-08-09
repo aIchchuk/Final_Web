@@ -1,0 +1,27 @@
+.gif-container {
+    color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    margin: 0 20px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.gif-grid {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+  
+img {
+    border-radius: 5px;
+}
+
+.searchtext{
+    color: black;
+    margin-right: 50px;
+}
+  

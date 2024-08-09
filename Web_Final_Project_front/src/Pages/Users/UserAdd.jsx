@@ -4,8 +4,11 @@ import "./user.css";
 
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function UserAdd() {
+  const navigate = useNavigate();
+
   const { register, handleSubmit } = useForm();
 
   const saveApiCall = useMutation({
@@ -21,15 +24,19 @@ function UserAdd() {
     },
   });
 
+  
+
   const submit = async (data) => {
     saveApiCall.mutate(data, {
         onSuccess() {
-
+          navigate("/users")
         }
     })
   };
 
   return (
+    <>
+    <button className="b" onClick={()=>navigate("/users/")}>See User list</button>
     <form onSubmit={handleSubmit(submit)}>
       <div>
         <label>Username</label>
@@ -63,6 +70,7 @@ function UserAdd() {
         <input type="submit" className="a" />
       </div>
     </form>
+    </>
   );
 }
 

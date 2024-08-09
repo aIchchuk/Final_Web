@@ -1,21 +1,25 @@
 import { useQuery } from "@tanstack/react-query";
 import "./user.css"
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 function UserList(){
 
+    const navigate = useNavigate();
+
     const getApiCall = useQuery({
         queryKey:["GET_USER_DATA"],
         queryFn(){
-            return axios.get("http://localhost:8080/employee")
+            return axios.get("http://localhost:8080/users")
         }
     })
 
-    console.log(getApiCall);
+    console.log(getApiCall?.data?.data);
 
     return(
         <div>
+            <button className="b" onClick={()=>navigate("/users/add")}>Add new user</button>
             <table>
                 <thead>
                     <tr>
@@ -27,7 +31,15 @@ function UserList(){
                 </thead>
 
                 <tbody>
-                    <tr></tr>
+                    {getApiCall?.data?.data?.map(i=>(
+                        <tr>
+                            <td>{i?.id}</td>
+                            <td>{i?.username}</td>
+                            <td>{i?.email}</td>
+                            <td>{i?.password}</td>
+                        </tr>
+                    ))}
+                    
                 </tbody>
             </table>
             

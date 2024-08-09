@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("users")
@@ -24,5 +25,15 @@ public class UserController {
     @PostMapping
     public void save(@RequestBody @ModelAttribute UserPojo userPojo) {
         userService.saveAndUpdate(userPojo);
+    }
+
+    @GetMapping("/{id}")
+    public Optional<User> findById(@PathVariable Integer id){
+        return userService.findById(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable Integer id){
+        userService.deleteById(id);
     }
 }
