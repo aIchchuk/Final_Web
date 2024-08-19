@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs"
 import Contact from "./Pages/Contact"
 import MoreInfo from "./Pages/MoreInfo"
+import Login from "./Pages/Login_Register/Login";
 
 import UserAdd from "./Pages/Users/UserAdd";
 import UserList from "./Pages/Users/UserList";
@@ -26,13 +27,9 @@ function App(){
         <Routes>
           <Route index element={<Home/>}></Route>
 
-          <Route path="/Home" element={<Home/>}></Route>
 
-          <Route path="/AboutUs" element={<AboutUs/>}></Route>
-
-          <Route path="/Contact" element={<Contact/>}></Route>
           
-          <Route path="/MoreInfo" element={<MoreInfo/>}></Route>
+          <Route path="/Login" element={<Login/>}></Route>
 
           <Route path="/users/add" element={<UserAdd/>}></Route>
 

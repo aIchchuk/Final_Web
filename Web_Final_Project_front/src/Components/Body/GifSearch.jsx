@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import "./Gif.css"
+import './Gif.css';
+import TrendingGifs from './TrendingGifs'; // Import the TrendingGifs component
 
 function GifSearch() {
   const [searchQuery, setSearchQuery] = useState('');
   const [gifs, setGifs] = useState([]);
+  const [showTrending, setShowTrending] = useState(true); // State to control visibility of trending GIFs
   const API_KEY = 'k3iuKaMTDxU5iI1U2GNU6cvxZC5dpzdG'; // Replace with your Giphy API key
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchQuery}&limit=100`);
     setGifs(response.data.data);
+    setShowTrending(false); // Hide trending GIFs when search is performed
   };
 
   const getRandomSize = () => {
@@ -31,6 +34,10 @@ function GifSearch() {
         <input className="searchtext" type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
         <button type="submit">Search</button>
       </form>
+      
+      {/* Conditionally render trending GIFs */}
+      {showTrending && <TrendingGifs />}
+
       <div className="gif-container">
         <div className="gif-grid">
           {gifs.map((gif) => (

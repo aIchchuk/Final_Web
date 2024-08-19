@@ -1,27 +1,46 @@
-.gif-container {
-    color: rgba(255, 255, 255, 0.9);
-    width: 100%;
-    margin: 0 20px;
-    padding: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-.gif-grid {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: flex-start;
-}
-  
-img {
-    border-radius: 5px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Applying custom styles with Tailwind */
+body {
+  @apply font-sans bg-gray-100;
 }
 
-.searchtext{
-    color: black;
-    margin-right: 50px;
+form {
+  @apply mb-4 text-center;
 }
-  
+
+.searchtext {
+  @apply px-2 py-1 text-sm border border-gray-300 rounded-md outline-none;
+  color: black;
+  margin-right: 45px; /* Adjusted for better spacing */
+
+  margin-bottom: 20px;
+}
+
+.searchtext:focus {
+  @apply border-gray-500; /* Updated focus border color */
+}
+
+button {
+  @apply px-2 py-1 text-sm text-white bg-gray-800 border-none rounded-md cursor-pointer transition-colors duration-300;
+}
+
+button:hover {
+  @apply bg-gray-700; /* Darker shade of gray for hover */
+}
+
+
+
+.gif-grid {
+  @apply mt-4 flex flex-wrap gap-5 justify-center;
+}
+
+.gif-grid img {
+  @apply rounded-md shadow-md;
+  max-width: 300px; /* Set a maximum width for smaller images */
+  height: auto; /* Maintain aspect ratio */
+}

@@ -1,0 +1,27 @@
+.login{
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    margin-left: 50%;
+    height: 737px;
+    background-color: rgba(255, 255, 255, 0.93);
+    border: 1px solid;
+    justify-content: center;
+}
+
+.form{
+    margin-top: 120px;
+    margin-left: 120px;
+    margin-right: 120px;
+    border: 1px solid;
+}
+
+.login .form .input{
+    border: 1px solid;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.login .form .field{
+    margin: 20px;
+}

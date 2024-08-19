@@ -1,21 +1,30 @@
-import React, { useState } from 'react';
+import "./loginsignup.css"
+
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle login logic here
-    console.log('Login:', email, password);
-  };
+  
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button type="submit">Login</button>
-    </form>
+    <>
+    <div className="login">
+        <div className="form">
+            <h2 className="field">Login</h2>
+            <h2 className="field">Welcome back!</h2>
+
+            <input type={"text"} className="input"></input>
+            <input type={"text"} className="input"></input>
+
+            <h2 className="field">Forgot Password?</h2>
+            
+            <h2 className="field">Log in</h2>
+
+            <h2 className="field">Register</h2>
+
+
+        </div>
+
+    </div>
+    </>
   );
 }
 
