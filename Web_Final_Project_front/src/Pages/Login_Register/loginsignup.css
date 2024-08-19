@@ -1,27 +1,144 @@
-.login{
-    font-size: 20px;
-    align-items: center;
-    text-align: center;
-    margin-left: 50%;
-    height: 737px;
-    background-color: rgba(255, 255, 255, 0.93);
-    border: 1px solid;
-    justify-content: center;
+/* Full screen background overlay */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0; /* Ensure it’s behind the form */
 }
 
-.form{
-    margin-top: 120px;
-    margin-left: 120px;
-    margin-right: 120px;
-    border: 1px solid;
+/* Overall container styling */
+.login-container {
+  max-width: 500px; /* Increased width */
+  width: 100%; /* Ensure full width up to max-width */
+  padding: 20px;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid #444;
+  color: #fff;
+  position: relative;
+  z-index: 1; /* Ensure it’s above the background overlay */
 }
 
-.login .form .input{
-    border: 1px solid;
-    width: 100%;
-    margin-top: 50px;
+/* Header styling */
+.login-header {
+  margin-bottom: 30px;
 }
 
-.login .form .field{
-    margin: 20px;
+/* Styling for the app name */
+.login-header h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 28px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Styling for the form container */
+.login-form-container {
+  width: 100%;
+}
+
+/* Styling for the form element */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for each form field */
+.login-form div {
+  margin-bottom: 20px;
+}
+
+/* Styling for labels */
+.login-form label {
+  font-weight: bold;
+  color: #ddd;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Styling for input fields */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Input focus effect */
+.login-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+/* Styling for the buttons container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Styling for buttons */
+.login-form button,
+.button-container button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 48%;
+}
+
+/* Button hover effect */
+.login-form button:hover,
+.button-container button:hover {
+  background: linear-gradient(135deg, #0056b3, #004080);
+  transform: scale(1.02);
+}
+
+/* Button active effect */
+.login-form button:active,
+.button-container button:active {
+  transform: scale(0.98);
+}
+
+/* Styling for error messages */
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Sparkles animation */
+@keyframes sparkle {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.sparkle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: url('https://www.transparenttextures.com/patterns/sparkle.png') repeat;
+  z-index: 1;
 }

@@ -36,7 +36,7 @@ button:hover {
 
 
 .gif-grid {
-  @apply mt-4 flex flex-wrap gap-5 justify-center;
+  @apply mt-4 flex flex-wrap gap-7 justify-center;
 }
 
 .gif-grid img {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Body.css";
 import GifSearch from "./GifSearch";
 import TrendingGifs from "./TrendingGifs";
-import UserPosts from "./UserPosts";
+import UserPosts from "../../Pages/UserPosts";
 
 function Body() {
   const [activeTab, setActiveTab] = useState('trending'); 

@@ -10,7 +10,7 @@ function Header(){
     return(
         <div className="header">
             <div className="morehead">
-                <div className="anot"><h3>Fa-taak</h3></div>
+                <div className="anot"><Link to = "/"><h3>Fa-taak</h3></Link></div>
 
                 <Link to = "/login"><h3>Login</h3></Link>
                 

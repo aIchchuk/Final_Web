@@ -35,8 +35,7 @@ function GifSearch() {
         <button type="submit">Search</button>
       </form>
       
-      {/* Conditionally render trending GIFs */}
-      {showTrending && <TrendingGifs />}
+
 
       <div className="gif-container">
         <div className="gif-grid">
