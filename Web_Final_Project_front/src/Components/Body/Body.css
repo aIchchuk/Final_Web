@@ -14,15 +14,18 @@
 }
 
 .body .lside .head{
-    margin-top: 45px;
+    margin-top: 50px;
     margin-bottom: 45px;
+    margin-left: 50px;
 }
 
 .body .midside{
-    padding-top: 30px;
+    margin-left: 50px;
+    padding-top: 20px;
+    margin-top: 10px;
     width: 1800px;
-    height: 645px;
-    margin-right: 180px;
+    height: 640px;
+    margin-right: 160px;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -47,7 +50,7 @@
 }
 
 .head.active {
-    color: hwb(0 100% 0% / 0.9); 
+    color: hwb(0 100% 0.9%); 
     font-size: 20px;
 }
   

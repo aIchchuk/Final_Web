@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Body.css";
 import GifSearch from "./GifSearch";
 import TrendingGifs from "./TrendingGifs";
-import UserPosts from "../../Pages/UserPosts";
+import UserPosts from "./UserPosts";
 
 function Body() {
   const [activeTab, setActiveTab] = useState('trending'); 
@@ -14,7 +14,7 @@ function Body() {
   return (
     <div className="body">
       <div className="lside">
-        <h2 className={`head ${activeTab === 'userPosts' ? 'active' : ''}`} onClick={() => handleTabClick('userPosts')}>
+        <h2 className={`head ${activeTab === 'userposts' ? 'active' : ''}`} onClick={() => handleTabClick('userposts')}>
           <button>User Posts</button>
         </h2>
         <h2 className={`head ${activeTab === 'trending' ? 'active' : ''}`} onClick={() => handleTabClick('trending')}>
@@ -26,7 +26,7 @@ function Body() {
       </div>
 
       <div className="midside" style={{ position: "relative", overflow: 'scroll' }}>
-        {activeTab === 'userPosts' ? <UserPosts /> :
+        {activeTab === 'userposts' ? <UserPosts /> :
          activeTab === 'trending' ? <TrendingGifs /> : <GifSearch />}
       </div>
     </div>

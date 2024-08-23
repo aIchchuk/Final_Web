@@ -14,4 +14,9 @@ public interface UserService {
     Optional<User> findById(Integer id);
 
     void deleteById(Integer id);
+
+    boolean authenticate(String username, String password);
+
+    User findByUsername(String username);
+
 }

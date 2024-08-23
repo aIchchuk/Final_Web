@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './loginsignup.css';  // Ensure you import the CSS file
+import './loginsignup.css'; // Ensure you import the CSS file
 
 function Login() {
   const navigate = useNavigate();
@@ -15,9 +15,13 @@ function Login() {
         params: data,
       });
     },
-    onSuccess: () => {
-      // Redirect to the home page on successful login
-      navigate("/userposts");
+    onSuccess: (response) => {
+      const { userId } = response.data; // Ensure correct path to userId
+      if (userId) {
+        navigate(`/${userId}/dashboard`);
+      } else {
+        alert("User ID is not available");
+      }
     },
     onError: (error) => {
       alert("Login failed: " + (error.response?.data || "Unknown error"));
